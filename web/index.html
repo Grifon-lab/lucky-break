@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lucky Break</title>
+<link rel="icon" href="../assets/app.png"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+ <header><div class="brand"><img class="app-icon" src="../assets/app.png" alt=""><div><b>Lucky Break</b><small>Слоты</small></div></div><nav><button id="sound" aria-label="Включить звук" aria-pressed="false">♫<span>×</span></button><button id="help" aria-label="Правила игры">?</button></nav></header>
+ <section class="intro"><h1>Один спин. Три совпадения.</h1><p id="status" role="status" aria-live="polite">Твоя следующая комбинация уже ждёт.</p></section>
+ <section class="machine" aria-label="Игровой автомат">
+  <div class="meters"><div><small>Виртуальный баланс</small><strong><span id="balance">1 000</span> <i>◈</i></strong></div><div><small>Ставка</small><strong>50 <i>◈</i></strong></div></div>
+  <div class="reels"><span class="dot left"></span><span class="dot right"></span>
+   <div class="reel"><div class="viewport"><div class="strip"></div></div><span class="name">Codex</span></div>
+   <div class="reel"><div class="viewport"><div class="strip"></div></div><span class="name">Claude</span></div>
+   <div class="reel"><div class="viewport"><div class="strip"></div></div><span class="name">DeepSeek</span></div>
+  </div><p class="paytable">Три одинаковых <span>=</span> 500 кредитов</p>
+ </section>
+ <section class="controls"><div class="count"><small>Спины</small><strong id="count">0</strong></div><button id="spin">Крутить <span>→</span></button><div class="keyboard"><span>Пробел — крутить</span><small>3 совпадения — победа</small></div></section>
+</main>
+<dialog id="win" aria-labelledby="win-title"><div class="dialog-content"><img id="winner" alt="Выигрышный символ"><h2 id="win-title">Есть совпадение!</h2><strong class="reward">+500 кредитов</strong><p>Продолжение — в моём Telegram</p><a id="channel" target="_blank" rel="noopener noreferrer">@YOUR_CHANNEL</a><button class="secondary" id="continue">Продолжить игру</button></div></dialog>
+<dialog id="rules" aria-labelledby="rules-title"><div class="dialog-content rules"><h2 id="rules-title">Как играть</h2><p>Одно вращение стоит <b>50 кредитов</b>.</p><p>Собери три одинаковых значка ИИ.</p><p>Выигрыш — <b>500 виртуальных кредитов</b>.</p><p class="hint">Пробел — крутить. Esc — закрыть окно.</p><button id="close-rules">Понятно</button></div></dialog>
+<script src="config.js"></script><script src="game.js"></script>
+</body></html>

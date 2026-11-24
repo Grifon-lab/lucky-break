@@ -1,0 +1,3 @@
+native/resources.o
+node_modules/
+*.log
